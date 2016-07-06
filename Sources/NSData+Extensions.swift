@@ -32,7 +32,7 @@ extension NSData {
             #if os(Linux)
                 return self.base64EncodedString([.encoding64CharacterLineLength])
             #else
-                return self.base64EncodedString(options: .lineLength64Characters)
+                return self.base64EncodedString(NSDataBase64EncodingOptions(rawValue:0))
             #endif
         #endif
     }

@@ -128,7 +128,7 @@ import Foundation
                 #if os(Linux)
                     return NSData(bytes: bytesArray).base64EncodedString([])
                 #else
-                    return NSData(bytes: bytesArray).base64EncodedString(options: [])
+                    return NSData(bytes: bytesArray).base64EncodedString([])
                 #endif
             #endif
         }
